@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarketMode — Introduction to Marketing</title>
+  <meta name="description" content="A clear-glass exam prep space built from your Introduction to Marketing study notes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="MarketMode home">
+        <span class="wordmark-mark">M</span>
+        <span>MarketMode</span>
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#chapters">Chapters</a>
+        <a href="#practice">Practice</a>
+        <a href="#progress">Progress</a>
+      </nav>
+      <button class="ghost-button" id="resetProgress" type="button">Reset progress</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">INTRODUCTION TO MARKETING · EXAM MODE</p>
+          <h1>Make the syllabus<br><em>feel smaller.</em></h1>
+          <p class="hero-lede">Seven modules, 140 exact questions, and the ideas that make them click — arranged for quick study sessions instead of marathon reading.</p>
+          <div class="hero-actions">
+            <button class="primary-button" id="startButton" type="button">Start a quick round <span>↗</span></button>
+            <a class="text-link" href="#chapters">Browse chapters</a>
+          </div>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit-core"><span>7</span><small>modules</small></div>
+          <span class="orbit-label label-one">140 questions</span>
+          <span class="orbit-label label-two">case-led notes</span>
+          <span class="orbit-label label-three">streak practice</span>
+        </div>
+      </section>
+
+      <section class="progress-strip" id="progress">
+        <div>
+          <p class="eyebrow">YOUR STUDY SIGNAL</p>
+          <h2 id="progressTitle">Start with one clean win.</h2>
+        </div>
+        <div class="progress-meter" aria-label="Overall progress">
+          <div class="meter-track"><span id="overallMeter"></span></div>
+          <div class="meter-meta"><span id="progressLabel">0 / 140 questions answered</span><span id="accuracyLabel">Accuracy —</span></div>
+        </div>
+        <div class="streak-box"><span id="streakValue">0</span><small>current streak</small></div>
+      </section>
+
+      <section class="section-block" id="chapters">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE MAP</p>
+            <h2>Pick a lane. Keep moving.</h2>
+          </div>
+          <p class="section-note">Every chapter has a fast guide, a case lens, topic-level video searches, and practice built from the source questions.</p>
+        </div>
+        <div class="chapter-grid" id="chapterGrid"></div>
+      </section>
+
+      <section class="practice-layout" id="practice">
+        <aside class="practice-sidebar">
+          <p class="eyebrow">PRACTICE LAB</p>
+          <h2>Turn recall<br>into reflex.</h2>
+          <p>Use the exact question bank in four ways. Switch modules whenever your brain needs a change of scene.</p>
+          <div class="mode-list" role="tablist" aria-label="Practice modes">
+            <button class="mode-button active" data-mode="quiz" role="tab" type="button"><span>01</span> Streak quiz</button>
+            <button class="mode-button" data-mode="flashcards" role="tab" type="button"><span>02</span> Swipe cards</button>
+            <button class="mode-button" data-mode="speed" role="tab" type="button"><span>03</span> Speed match</button>
+            <button class="mode-button" data-mode="fill" role="tab" type="button"><span>04</span> Fill the blank</button>
+          </div>
+          <div class="practice-tip">
+            <span class="tip-dot"></span>
+            <p><strong>Small move:</strong> say the answer before you reveal it. Your memory likes a little friction.</p>
+          </div>
+        </aside>
+        <div class="practice-stage">
+          <div class="practice-toolbar">
+            <label>
+              <span class="eyebrow">MODULE</span>
+              <select id="moduleSelect" aria-label="Choose a module"></select>
+            </label>
+            <div class="round-meta"><span id="roundCount">Question 1 / 20</span><span id="roundScore">0 correct</span></div>
+          </div>
+          <div id="practiceCard" class="practice-card"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Built from your 2026–27 Introduction to Marketing notes.</span>
+      <span>Clear glass. Clear thinking.</span>
+    </footer>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
